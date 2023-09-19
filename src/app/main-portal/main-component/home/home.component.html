@@ -1,0 +1,29 @@
+<!-- <div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mt-2" *ngFor="let item of allProduct">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="URL+item.ProductImages[1].ProductImageUrl">
+                <div class="card-body">
+                    <h5 class="card-title">{{item?.productName}}</h5>
+                    <p class="card-text">{{item?.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 col-lg-6 mt-2" *ngFor="let item of allProduct">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="URL+item.ProductImages[1].ProductImageUrl">
+                <div class="card-body">
+                    <h5 class="card-title">{{item?.productName}}</h5>
+                    <p class="card-text">{{item?.description}}</p>
+                    <button type="button" class="btn btn-outline-primary" (click)="redirecToViewProduct(item._id)">View details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
